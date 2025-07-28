@@ -8,22 +8,9 @@ import { Circle } from "./Circle";
 
 const Home = () => {
 
-	const background = {
-		red: {
-			color: "danger"
-		},
-
-		yellow: {
-			color: "warning"
-		},
-
-		green: {
-			color: "success"
-		}
-	};
 
 	const [fondoActual, setFondoActual] = useState("");
-	
+
 
 	return (
 
@@ -33,9 +20,9 @@ const Home = () => {
 			<div className="body container"
 				style={{ background: "black", width: "300px", height: "700px" }}>
 				<div className="row">
-					<Circle onclick={()=> setFondoActual("danger")}/>
-					<Circle onclick={()=> setFondoActual("warning")}/>
-					<Circle onclick={()=> setFondoActual("success")}/>
+					<Circle color="danger" fondoActual={fondoActual} changeColor={setFondoActual} />
+					<Circle color="warning" fondoActual={fondoActual} changeColor={setFondoActual} />
+					<Circle color="success" fondoActual={fondoActual} changeColor={setFondoActual} />
 				</div>
 			</div>
 		</div>
